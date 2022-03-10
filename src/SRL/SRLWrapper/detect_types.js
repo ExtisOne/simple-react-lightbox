@@ -20,6 +20,10 @@ export function isGatsbyGalleryImage(e) {
     e.parentNode.nodeName === 'PICTURE' &&
     e.parentNode.parentNode.className.includes('gatsby-image-wrapper') &&
     e.parentNode.parentNode.parentNode.nodeName === 'A'
+  ) || (
+    e.nodeName === 'IMG' &&
+    e.parentNode.className.includes('gatsby-image-wrapper') &&
+    e.parentNode.parentNode.nodeName === 'A'
   )
 }
 
